@@ -1,11 +1,13 @@
 <?php
 
+/** @var $router Router */
+
+$router->get('','controllers/index.php');
+$router->get('about','controllers/about.php');
+$router->get('about/culture','controllers/about-culture.php');
+$router->get('contact','controllers/contact.php');
+$router->get('ask-name','controllers/ask-name.php');
+$router->get('test','controllers/test.php');
 
 
-$router->define( [
-    ''               => 'controllers/index.php',
-    'about'          => 'controllers/about.php',
-    'about/culture'  => 'controllers/about-culture.php',
-    'contact'        => 'controllers/contact.php'
-
-]);
+$router->post('save-name','controllers/save-name.php');

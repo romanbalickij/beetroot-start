@@ -15,9 +15,20 @@ class QueryBuilder{
         $stmt = $this->pdo->query("SELECT * FROM $table");
         return $tasks = $stmt->fetchAll(PDO::FETCH_CLASS,$className);
     }
-    public  function delete($table,$id){
-        $this->pdo->query("DELETE FROM $table WHERE id=$id");
+    public  function insert($table,$param){
+          $query  = sprintf('INSERT INTO %s(%s) VALUES (%s)',
+          $table,
+          implode(', ',  array_keys($param)),
+           ':'.implode(', :',array_keys($param))
+          );
 
+          try{
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute($param);
+
+              return true;
+          }catch (\PDOException $exception) {
+              return false;
+          }
     }
-
 }

@@ -5,7 +5,8 @@
 
 
 require $router = Router::load('routes.php')->direct(
-    Request::url()
+    Request::url(),
+    Request::method()
 );
 
 
