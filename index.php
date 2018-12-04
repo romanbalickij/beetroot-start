@@ -1,6 +1,6 @@
 <?php
- require 'core/Bootstrap.php';
-
+require 'vendor/autoload.php';
+require 'core/Bootstrap.php';
 
 
 
