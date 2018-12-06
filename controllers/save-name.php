@@ -1,8 +1,10 @@
 <?php
-$name = $_POST['name'];
+$name = htmlspecialchars($_POST['name']);
+$username = htmlspecialchars($_POST['username']);
 $result  = $app['database']->insert('users',[
     'name'=> $name,
-    'username' => 'test'
+    'lastname' => $username
+
     ]
 );
 
@@ -11,4 +13,6 @@ if($result){
 }else{
     echo 'Qyery exception';
 }
+
+
 

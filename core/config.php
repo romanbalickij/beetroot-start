@@ -4,6 +4,6 @@ return[
         'host'=> 'localhost',
         'user'=> 'root',
         'password'=> 1,
-        'name'=> 'mytodo'
+        'name'=> 'start'
     ]
 ];
