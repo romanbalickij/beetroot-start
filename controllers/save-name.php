@@ -1,7 +1,7 @@
 <?php
 $name = htmlspecialchars($_POST['name']);
 $username = htmlspecialchars($_POST['username']);
-$result  = $app['database']->insert('users',[
+$result  = App::get('database')->insert('users',[
     'name'=> $name,
     'lastname' => $username
 
