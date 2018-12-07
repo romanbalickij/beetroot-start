@@ -18,8 +18,8 @@ class App
 
     public  static function get($key){
 
-        if(!isset(self::$registry)){
-            throw  new \Exception('not registry');
+        if(!isset(self::$registry[$key])){
+            throw  new Exception('not registry');
         }
         return   self::$registry[$key];
     }

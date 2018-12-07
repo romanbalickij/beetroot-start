@@ -1,3 +1,3 @@
-<?php require 'views/about-culture.php';?>
+<?php require 'views/about-culture.view.php';?>
 
 

@@ -1,2 +1,2 @@
-<?php require 'views/about.php';?>
+<?php require 'views/about.view.php';?>
 

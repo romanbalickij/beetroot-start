@@ -1,1 +1,1 @@
-<?php require 'views/ask-name.php';?>
+<?php require 'views/ask-name.view.php';?>
