@@ -14,7 +14,7 @@ class QueryBuilder{
 
     public  function selectAll($table,$className){
         $stmt = $this->pdo->query("SELECT * FROM $table");
-        return $tasks = $stmt->fetchAll(PDO::FETCH_CLASS,$className);
+        return $tasks = $stmt->fetchAll(PDO::FETCH_CLASS,'App\Models\\'.$className);
     }
     public  function insert($table,$param){
           $query  = sprintf('INSERT INTO %s(%s) VALUES (%s)',

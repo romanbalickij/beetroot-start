@@ -1,4 +1,4 @@
-<?php require 'views/partials/header.php';?>
+<?php require 'app/views/partials/header.php';?>
 <h3>ask your name</h3>
 
 <form action="save-name" method="POST">
@@ -6,4 +6,4 @@
     Username:<br><input type="text" name="username"><br>
     <button type="submit">надiслати</button>
 </form>
-<?php require 'views/partials/footer.php';?>
+<?php require 'app/views/partials/footer.php';?>

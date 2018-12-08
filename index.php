@@ -4,7 +4,7 @@ require 'core/bootstrap.php';
 
 use Core\Router;
 use Core\Request;
- Router::load('routes.php')->direct(
+ Router::load('app/routes.php')->direct(
     Request::url(),
     Request::method()
 );

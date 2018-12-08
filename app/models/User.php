@@ -1,4 +1,6 @@
 <?php
+namespace App\Models;
+
 Class User{
     public  $id;
     public $name;

@@ -6,7 +6,7 @@
 </head>
 <body>
 <header>
-    <?php require 'views/partials/nav.views.php';?>
+    <?php require 'app/views/partials/nav.views.php';?>
     <h3>ask your name</h3>
     <form action="users" method="POST">
         Name:    <br><input type="text" name="name"><br>
