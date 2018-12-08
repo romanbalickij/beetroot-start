@@ -5,7 +5,7 @@
  * Date: 06.12.2018
  * Time: 20:50
  */
-
+namespace App\Controller;
 class PagesController
 {
     public  function contact(){

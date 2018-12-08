@@ -1,21 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roman
- * Date: 07.12.2018
- * Time: 21:01
- */
+namespace App\Controller;
+use Core\App;
 
 class UsersController
 {
     public function index(){
         $users = App::get('database')->selectAll('users','User');
-
-
         view('index',[
             'users'=>$users
         ]);
+    }
 
-       // require 'views/index.view.php';
+    public  function  store()
+    {
+        $result = App::get('database')->insert('users',[
+            'name' => $_POST['name'],
+            'lastname' => $_POST['username']
+        ]);
+
+        redirect('/');
     }
 }
