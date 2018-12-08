@@ -8,7 +8,6 @@
 
 class App
 {
-
     protected static $registry = [];
 
     public static function bind($key,$value){
@@ -23,5 +22,4 @@ class App
         }
         return   self::$registry[$key];
     }
-
 }

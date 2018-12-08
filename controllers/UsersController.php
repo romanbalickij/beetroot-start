@@ -8,11 +8,14 @@
 
 class UsersController
 {
-
-    public function Index(){
+    public function index(){
         $users = App::get('database')->selectAll('users','User');
 
-        require 'views/index.view.php';
-    }
 
+        view('index',[
+            'users'=>$users
+        ]);
+
+       // require 'views/index.view.php';
+    }
 }

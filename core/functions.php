@@ -5,7 +5,9 @@ function dd($arg){
     var_dump($arg);
     echo '</pre>';
     die();
-
 }
 
-
+function view($name,$variables = []){
+    extract($variables);
+    require 'views/'.$name.'.view.php';
+}

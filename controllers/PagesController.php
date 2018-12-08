@@ -8,12 +8,10 @@
 
 class PagesController
 {
-
     public  function contact(){
-        require 'views/contact.view.php';
+        view('contact');
     }
     public  function about(){
-        require 'views/about.view.php';
+        view('about');
     }
-
 }
